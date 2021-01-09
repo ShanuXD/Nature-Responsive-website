@@ -11,6 +11,11 @@
     clip-path:polygon(0 0, 100% 0, 100% 100%, 0 75vh) ;
     position: relative;
 
+    @include respond(phone){
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85vh);
+    clip-path:polygon(0 0, 100% 0, 100% 100%, 0 85vh) ;
+    }
+
  &__logo-box{
      position: absolute;
      margin-top: 4rem;
@@ -28,24 +33,5 @@
      transform:translate(-50%,-50%);
      text-align: center;  
  }
-
-}
-
-
-.heading-secondary{
-    font-size: 3.5rem;
-    text-transform: uppercase;
-    font-weight: 700;
-    display: inline-block;
-    background-image: linear-gradient(to right,$color-primary-light,$color-primary-dark);
-    -webkit-background-clip: text;
-    color:transparent;
-    letter-spacing: 2px;
-    transition: all .2s;
-
-    &:hover{
-        transform: skewY(2deg) skewX(5deg) scale(1.1);
-        text-shadow: .5rem 1rem 2rem rgba($color-black,.2);
-    }
 
 }
